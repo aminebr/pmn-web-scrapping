@@ -4,5 +4,6 @@ FROM python:3.6-slim
 LABEL maintainer = "benrejeb.amine0@gmail.com" # Set the default working directory
 WORKDIR /app/
 COPY crawler.py requirements.txt /app/
-RUN pip install -r requirements.txt CMD ["python","./crawler.py"]
+RUN pip install -r requirements.txt
+CMD ["python","./crawler.py"]
 # When the container starts, run this ENTRYPOINT python ./ crawler.py
